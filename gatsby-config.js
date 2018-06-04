@@ -33,6 +33,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-emotion`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -43,5 +44,11 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`ubuntu\:400, 700`],
+      },
+    },
   ],
 };

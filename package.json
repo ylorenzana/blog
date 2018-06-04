@@ -4,9 +4,17 @@
   "version": "1.0.0",
   "author": "Yang Lorenzana",
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-brands": "^5.0.10",
+    "@fortawesome/fontawesome-free-solid": "^5.0.10",
+    "@fortawesome/react-fontawesome": "0.0.18",
+    "emotion": "^9.1.2",
+    "emotion-server": "^9.1.2",
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
+    "gatsby-plugin-emotion": "^1.1.16",
     "gatsby-plugin-google-analytics": "^1.0.4",
+    "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-manifest": "^1.0.4",
     "gatsby-plugin-offline": "^1.0.4",
     "gatsby-plugin-preact": "^1.0.3",
@@ -20,26 +28,27 @@
     "gatsby-source-filesystem": "^1.4.3",
     "gatsby-transformer-remark": "^1.7.1",
     "gatsby-transformer-sharp": "^1.6.1",
-    "lodash": "^4.15.0"
+    "lodash": "^4.15.0",
+    "normalize.css": "^8.0.0",
+    "react-emotion": "^9.1.2"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0",
     "prettier": "^1.6.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "dev": "gatsby develop",
-    "lint":
-      "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi":
-      "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
