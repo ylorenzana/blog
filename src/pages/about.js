@@ -2,9 +2,11 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { css } from 'emotion';
 
+import { mq } from '../layouts/cssConstants';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import resume from './Lorenzana-Resume-V3.pdf';
+import resume from '../assets/Lorenzana-Resume-V3.pdf';
+
 const wrapper = css({
   minHeight: '100vh',
   display: 'grid',
@@ -15,9 +17,9 @@ const wrapper = css({
   margin: '0',
 });
 
-const aboutSection = css({
+const aboutSection = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
   display: 'grid',
-  gridColumn: '3 / -3',
+  // gridColumn: '3 / -3',
   // justifyItems: 'center',
   gridGap: '1rem 0',
   padding: '1rem',

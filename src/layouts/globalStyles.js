@@ -6,7 +6,7 @@ injectGlobal`
   }
   body {
     font-family: 'Ubuntu', sans-serif;    
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 400;    
     background:#FCFCFC;
     color: #393E46;
@@ -31,7 +31,7 @@ injectGlobal`
       min-height: 100vh;
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: minmax(30vh, auto) minmax(50vh, auto) 8vh;
+      grid-template-rows: minmax(30vh, auto) minmax(50vh, auto) minmax(8vh, auto);
       grid-gap: 2rem 1rem;
       margin: 0;
       align-items: start;

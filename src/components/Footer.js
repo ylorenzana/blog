@@ -12,6 +12,7 @@ const footer = css({
   justifySelf: 'stretch',
   alignSelf: 'stretch',
   textAlign: 'center',
+  padding: '0.5rem',
   p: {
     // margin: '0',
   },

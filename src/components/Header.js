@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { css } from 'emotion';
 
-import proPic from './propicv2.jpg';
+import avatar from '../assets/avatar.png';
 import IconBar from '../components/IconBar';
 
 const header = css({
@@ -62,7 +62,8 @@ const activeLink = css({
 
 const pic = css({
   borderRadius: '50%',
-  width: '17rem',
+  width: '10rem',
+  height: '12rem',
 });
 
 const Header = () => (
@@ -73,11 +74,13 @@ const Header = () => (
       </Link>
     </nav>
     <div className={logo}>
-      <img
-        src={proPic}
-        alt="A picture of Yang Lorenzana in a stylish hat!"
-        className={pic}
-      />
+      <Link to={'/'}>
+        <img
+          src={avatar}
+          alt="A picture of Yang Lorenzana in a stylish hat!"
+          className={pic}
+        />
+      </Link>
       <Link to={'/'}>
         <h1>the blog of yanglorenzana</h1>
       </Link>

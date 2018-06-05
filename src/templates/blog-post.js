@@ -4,12 +4,12 @@ import Link from 'gatsby-link';
 import get from 'lodash/get';
 import { css } from 'emotion';
 
+import { mq } from '../layouts/cssConstants';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const blogPost = css({
+const blogPost = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
   display: 'grid',
-  gridColumn: '3 / -3',
   gridGap: '1rem 0',
   padding: '1rem',
   lineHeight: '2',

@@ -10,6 +10,7 @@
     "@fortawesome/react-fontawesome": "0.0.18",
     "emotion": "^9.1.2",
     "emotion-server": "^9.1.2",
+    "facepaint": "^1.2.1",
     "gatsby": "^1.8.12",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-emotion": "^1.1.16",

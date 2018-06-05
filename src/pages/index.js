@@ -3,9 +3,8 @@ import Link from 'gatsby-link';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
-// import 'normalize.css';
-// import '.globalStyles';
 
+import { mq } from '../layouts/cssConstants';
 import Header from '../components/Header';
 import IconBar from '../components/IconBar';
 import Footer from '../components/Footer';
@@ -48,21 +47,8 @@ import Footer from '../components/Footer';
 //   },
 // });
 
-// const iconBar = css({
-//   // justifySelf: 'center',
-// });
-
-// const footer = css({
-//   fontSize: '1.2rem',
-//   gridColumn: '1 / -1',
-//   background: 'tomato',
-//   justifySelf: 'stretch',
-//   textAlign: 'center',
-// });
-
-const blogPosts = css({
+const blogPosts = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
   display: 'grid',
-  gridColumn: '3 / -3',
   justifyItems: 'center',
   gridGap: '1rem 0',
   padding: '1rem',

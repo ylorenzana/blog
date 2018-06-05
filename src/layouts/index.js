@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import 'normalize.css';
 
 import './globalStyles';
+
 class Template extends React.Component {
   render() {
     const { location, children } = this.props;
