@@ -49,7 +49,7 @@ const About = () => (
           I have prior experience working with a lot of dev "stuff", but the
           most relevant ones to my work today are Node.js, Express.js, Hapi.js,
           MongoDB, MySQL, Firebase, React, and Angular. I also work with Python
-          at times, I learned all of the fundamental Computer Science concepts
+          at times. I learned all of the fundamental Computer Science concepts
           using Python, because it was the language chosen by my school's CIS
           department. Here's a download link for my&nbsp;
           <a href={resume} download="YangLorenzana-Resume">
