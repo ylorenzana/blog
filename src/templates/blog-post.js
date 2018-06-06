@@ -38,11 +38,15 @@ class BlogPostTemplate extends React.Component {
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <Header />
         <article className={blogPost}>
-          <h1 className={blogTitle}>{post.frontmatter.title}</h1>
-          <p className={timeStamp}>{post.frontmatter.date}</p>
+          <div>
+            <h1 className={blogTitle}>{post.frontmatter.title}</h1>
+            <p className={timeStamp}>{post.frontmatter.date}</p>
+          </div>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
           <span>
-            <Link to="/">Back to home page</Link>
+            <Link to="/">
+              <strong>Back to home page</strong>
+            </Link>
           </span>
         </article>
         <Footer />

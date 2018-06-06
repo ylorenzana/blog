@@ -4,7 +4,7 @@ date: "2018-06-02T17:09:58+00:00"
 path: "/hello-world/"
 ---
 
-Yo! This wouldn't be much of a blog without at least one blog post, so, here is my first blog post—a cliché Hello World post, of course!
+This wouldn't be much of a blog without at least one blog post, so, here is my first blog post—a cliché _Hello World_ post, of course!
 
 ### So, what is this blog about, you might ask yourself?
 

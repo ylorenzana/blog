@@ -4,7 +4,7 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import heart from '@fortawesome/fontawesome-free-solid/faHeart';
 
 const footer = css({
-  fontSize: '1.20rem',
+  fontSize: '1.2rem',
   gridColumn: '1 / -1',
   background: '#EEE',
   display: 'grid',

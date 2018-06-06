@@ -41,7 +41,4 @@ injectGlobal`
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  @font-face {
- 
-  }
 `;
