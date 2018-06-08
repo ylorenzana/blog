@@ -63,13 +63,16 @@ const About = () => (
           </a>&nbsp;profile in case you're curious in viewing some of my work—I
           pinned the repos of some of the relevant projects I have worked on to
           the front page.
-          <p>
-            I used to prefer back-end development, but the more I work with
-            React, the more I have grown to enjoy writing code for the
-            front-end. I am currently working on some small React projects, and
-            I'm going to be blogging throughout the process, so stay tuned!
-          </p>
         </p>
+        <p>
+          I used to prefer back-end development, but the more I work with React,
+          the more I have grown to enjoy writing code for the front-end. I am
+          currently working on some small React projects, and I'm going to be
+          blogging throughout the process, so stay tuned!
+        </p>
+        <Link to="/">
+          <strong>Back to home page</strong>
+        </Link>
       </article>
     </section>
     <Footer />

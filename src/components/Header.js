@@ -21,6 +21,7 @@ const header = css({
     margin: '0',
     alignSelf: 'end',
     color: '#ECF0F1',
+    // fontSize: '5rem',
   },
   nav: {
     gridColumn: '-1',
@@ -82,7 +83,7 @@ const Header = () => (
         />
       </Link>
       <Link to={'/'}>
-        <h1>the blog of yanglorenzana</h1>
+        <h1>the blog of yang lorenzana</h1>
       </Link>
       <IconBar />
     </div>
