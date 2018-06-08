@@ -6,11 +6,13 @@ import github from '@fortawesome/fontawesome-free-brands/faGithub';
 import linkedin from '@fortawesome/fontawesome-free-brands/faLinkedin';
 import envelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
 
+import { colors } from '../layouts/cssConstants';
+
 const iconBar = css({
   display: 'flex',
   a: {
     margin: '0 0.8rem',
-    color: '#BDC3C7',
+    color: colors.lighterBlue,
     transition: 'all 0.15s ease',
     transform: 'scale(1.1)',
   },
@@ -38,5 +40,5 @@ const IconBar = () => (
     </a>
   </div>
 );
-``;
+
 export default IconBar;
