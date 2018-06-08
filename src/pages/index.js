@@ -4,62 +4,51 @@ import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
 
-import { mq } from '../layouts/cssConstants';
+import {
+  mq,
+  colors,
+  mainContent,
+  contentWrapper,
+} from '../layouts/cssConstants';
 import Header from '../components/Header';
-import IconBar from '../components/IconBar';
 import Footer from '../components/Footer';
-
-// const contentWrapper = css({
-//   minHeight: '100vh',
-//   display: 'grid',
-//   gridTemplateColumns: 'repeat(8, 1fr)',
-//   gridTemplateRows: 'minmax(28vh, auto) auto minmax(10vh, auto)',
-//   gridGap: '2rem 1rem',
-//   placeItems: 'center',
-//   margin: '0',
-// });
-
-// const header = css({
-//   gridColumn: '1 / -1',
-//   gridAutoFlow: 'column',
-//   display: 'grid',
-//   gridTemplateRows: 'repeat(3, 1fr)',
-//   justifySelf: 'stretch',
-//   alignSelf: 'stretch',
-//   gridAutoFlow: 'rows',
-//   placeItems: 'center',
-//   background: '#2C3E50',
-//   padding: '0.5rem',
-//   // gridTemplateRows: 'auto auto',
-//   h1: {
-//     margin: '0',
-//     alignSelf: 'end',
-//     color: '#ECF0F1',
-//   },
-//   nav: {
-//     gridColumn: '-1',
-//     justifySelf: 'end',
-//     marginTop: 0,
-//     marginRight: '1.5rem',
-//   },
-//   span: {
-//     color: '#BDC3C7',
-//   },
-// });
 
 const blogPosts = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
   display: 'grid',
   justifyItems: 'center',
+  height: '100%',
   gridGap: '1rem 0',
-  padding: '1rem',
+  padding: '2rem 25rem',
+  background: '#fff',
+  borderRadius: '1%',
 });
 
-const blogPost = css({
-  justifySelf: 'center',
-});
+const blogPost = css(
+  mq({
+    gridColumn: ['2 / -2', '2 / -2', '3 / -3'],
+  }),
+  {
+    justifySelf: 'center',
+    a: {
+      color: colors.grey,
+      fontWeight: 400,
+      borderBottom: 'none',
+    },
+    'a:hover': {
+      borderBottom: 'none',
+    },
+  }
+);
 
 const blogTitle = css({
-  marginBottom: 0,
+  marginBottom: '0',
+  a: {
+    color: colors.darkGrey,
+    borderBottom: 'none',
+  },
+  'a:hover': {
+    borderBottom: 'none',
+  },
 });
 class BlogIndex extends React.Component {
   render() {
@@ -67,23 +56,23 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
 
     return (
-      <div className="content-wrapper">
+      <div className={contentWrapper}>
         <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
         <Header />
-        <div className={blogPosts}>
+        <div className={mainContent}>
           {posts.map(post => {
             if (post.node.path !== '/404/') {
               const title =
                 get(post, 'node.frontmatter.title') || post.node.path;
               return (
                 <div key={post.node.frontmatter.path} className={blogPost}>
-                  <h2 className={blogTitle}>
-                    <Link to={post.node.frontmatter.path}>
-                      {post.node.frontmatter.title}
-                    </Link>
-                  </h2>
-                  <small>{post.node.frontmatter.date}</small>
-                  <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+                  <Link to={post.node.frontmatter.path}>
+                    <h2 className={blogTitle}>{post.node.frontmatter.title}</h2>
+                    <small>{post.node.frontmatter.date}</small>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: post.node.excerpt }}
+                    />
+                  </Link>
                 </div>
               );
             }

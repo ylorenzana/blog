@@ -4,13 +4,16 @@ import Link from 'gatsby-link';
 import get from 'lodash/get';
 import { css } from 'emotion';
 
-import { mq } from '../layouts/cssConstants';
+import {
+  mq,
+  colors,
+  mainContent,
+  contentWrapper,
+} from '../layouts/cssConstants';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const blogPost = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
-  display: 'grid',
-  gridGap: '1rem 0',
   padding: '1rem',
   lineHeight: '2',
   h1: {
@@ -34,21 +37,21 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title');
 
     return (
-      <div className="content-wrapper">
+      <div className={contentWrapper}>
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <Header />
-        <article className={blogPost}>
-          <div>
-            <h1 className={blogTitle}>{post.frontmatter.title}</h1>
-            <p className={timeStamp}>{post.frontmatter.date}</p>
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <span>
-            <Link to="/">
-              <strong>Back to home page</strong>
-            </Link>
-          </span>
-        </article>
+        <div className={mainContent}>
+          <article className={blogPost}>
+            <div>
+              <h1 className={blogTitle}>{post.frontmatter.title}</h1>
+              <p className={timeStamp}>{post.frontmatter.date}</p>
+            </div>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <span>
+              <Link to="/">Back to home page</Link>
+            </span>
+          </article>
+        </div>
         <Footer />
       </div>
     );

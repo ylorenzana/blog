@@ -2,7 +2,12 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { css } from 'emotion';
 
-import { mq } from '../layouts/cssConstants';
+import {
+  mq,
+  colors,
+  mainContent,
+  contentWrapper,
+} from '../layouts/cssConstants';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import resume from '../assets/Lorenzana-Resume-V3.pdf';
@@ -17,26 +22,19 @@ const wrapper = css({
   margin: '0',
 });
 
-const aboutSection = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
-  display: 'grid',
-  // gridColumn: '3 / -3',
-  // justifyItems: 'center',
-  gridGap: '1rem 0',
+const aboutParagraph = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
   padding: '1rem',
   lineHeight: '2',
+  margin: '0',
   h2: {
     margin: 0,
   },
 });
 
-const aboutParagraph = css({
-  margin: 0,
-});
-
 const About = () => (
-  <div className="content-wrapper">
+  <div className={contentWrapper}>
     <Header />
-    <section className={aboutSection}>
+    <div className={mainContent}>
       <article className={aboutParagraph}>
         <h2>About me</h2>
         <p>
@@ -55,14 +53,12 @@ const About = () => (
           using Python, because it was the language chosen by my school's CIS
           department. Here's a download link for my&nbsp;
           <a href={resume} download="YangLorenzana-Resume">
-            <strong>resume</strong>
+            resume
           </a>
           , and a link to my&nbsp;
-          <a href="https://github.com/ylorenzana">
-            <strong>GitHub</strong>
-          </a>&nbsp;profile in case you're curious in viewing some of my work—I
-          pinned the repos of some of the relevant projects I have worked on to
-          the front page.
+          <a href="https://github.com/ylorenzana">GitHub</a>&nbsp;profile in
+          case you're curious in viewing some of my work—I pinned the repos of
+          some of the relevant projects I have worked on to the front page.
         </p>
         <p>
           I used to prefer back-end development, but the more I work with React,
@@ -70,11 +66,9 @@ const About = () => (
           currently working on some small React projects, and I'm going to be
           blogging throughout the process, so stay tuned!
         </p>
-        <Link to="/">
-          <strong>Back to home page</strong>
-        </Link>
+        <Link to="/">Back to home page</Link>
       </article>
-    </section>
+    </div>
     <Footer />
   </div>
 );
