@@ -19,6 +19,7 @@ const header = css({
     margin: '0',
     alignSelf: 'end',
     color: colors.white,
+    padding: '0.25rem 2rem',
   },
   a: {
     borderBottom: 'none',
@@ -76,12 +77,12 @@ const Header = () => (
       <Link to={'/'}>
         <img
           src={avatar}
-          alt="A picture of Yang Lorenzana in a stylish hat!"
+          alt="A drawing of Yang Lorenzana in a stylish hoodie!"
           className={pic}
         />
       </Link>
       <Link to={'/'}>
-        <h1>the blog of yang lorenzana</h1>
+        <h1>the dev blog of yang lorenzana</h1>
       </Link>
       <IconBar />
     </div>
