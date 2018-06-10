@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import { css } from 'emotion';
 
@@ -33,6 +34,7 @@ const aboutParagraph = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
 
 const About = () => (
   <div className={contentWrapper}>
+    <Helmet title="About Yang Lorenzana" />
     <Header />
     <div className={mainContent}>
       <article className={aboutParagraph}>
