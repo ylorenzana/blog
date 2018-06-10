@@ -20,6 +20,7 @@ const header = css({
     alignSelf: 'end',
     color: colors.white,
     padding: '0.25rem 2rem',
+    textAlign: 'center',
   },
   a: {
     borderBottom: 'none',
