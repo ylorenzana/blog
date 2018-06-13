@@ -11,7 +11,7 @@ import {
 } from '../layouts/cssConstants';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import resume from '../assets/Lorenzana-Resume-V3.pdf';
+import resume from '../assets/Lorenzana-Resume-Current.pdf';
 
 const wrapper = css({
   minHeight: '100vh',
