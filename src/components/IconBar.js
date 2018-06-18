@@ -48,7 +48,7 @@ const IconBar = () => (
       <FontAwesomeIcon icon={envelope} size="lg" />
     </a>
     <a href={resume} title="Resume">
-      <FontAwesomeIcon icon={pdf} size="" className={pdfIcon} />
+      <FontAwesomeIcon icon={pdf} className={pdfIcon} />
     </a>
   </div>
 );
