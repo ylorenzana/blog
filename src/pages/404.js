@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import { css } from 'emotion';
 
 // import avatar from '../assets/avatar.png';

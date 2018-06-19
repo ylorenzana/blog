@@ -4,8 +4,8 @@ const path = require('path');
 const select = require(`unist-util-select`);
 const fs = require(`fs-extra`);
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const pages = [];
@@ -43,5 +43,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         });
       })
     );
+  });
+};
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.pdf$/,
+          use: 'url-loader',
+        },
+      ],
+    },
   });
 };

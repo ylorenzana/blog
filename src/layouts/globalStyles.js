@@ -1,6 +1,6 @@
 import { injectGlobal } from 'emotion';
 
-import { colors, mq } from './cssConstants';
+import { colors } from './cssConstants';
 
 injectGlobal`
   html {

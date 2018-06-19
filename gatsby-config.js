@@ -42,7 +42,7 @@ module.exports = {
         trackingId: `UA-120605896-1`,
       },
     },
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,

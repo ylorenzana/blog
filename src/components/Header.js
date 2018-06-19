@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import { css } from 'emotion';
 
 import { colors } from '../layouts/cssConstants';
@@ -8,7 +8,6 @@ import IconBar from '../components/IconBar';
 
 const header = css({
   gridColumn: '1 / -1',
-  gridAutoFlow: 'column',
   display: 'grid',
   justifySelf: 'stretch',
   alignSelf: 'stretch',
