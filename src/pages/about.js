@@ -1,27 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import { css } from 'emotion';
 
-import {
-  mq,
-  colors,
-  mainContent,
-  contentWrapper,
-} from '../layouts/cssConstants';
+import { mq, mainContent, contentWrapper } from '../layouts/cssConstants';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import resume from '../assets/Lorenzana-Resume-Current.pdf';
-
-const wrapper = css({
-  minHeight: '100vh',
-  display: 'grid',
-  gridTemplateColumns: 'repeat(8, 1fr)',
-  gridTemplateRows: 'minmax(28vh, auto) auto minmax(10vh, auto)',
-  gridGap: '2rem 1rem',
-  placeItems: 'center',
-  margin: '0',
-});
 
 const aboutParagraph = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
   padding: '1rem',

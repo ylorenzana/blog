@@ -28,7 +28,7 @@ const Footer = () => (
   <footer className={footer}>
     <p>
       Built with &nbsp;
-      <FontAwesomeIcon icon={heart} color={'crimson'} />
+      <FontAwesomeIcon icon={heart} size="1x" color={'crimson'} />
       &nbsp; using <a href="https://www.gatsbyjs.org/">Gatsby.</a>
       <br />
       Written, and maintained by Yang Lorenzana, a full stack JS engineer.

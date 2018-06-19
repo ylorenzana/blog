@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
@@ -10,18 +10,9 @@ import {
   mainContent,
   contentWrapper,
 } from '../layouts/cssConstants';
+import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
-const blogPosts = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
-  display: 'grid',
-  justifyItems: 'center',
-  height: '100%',
-  gridGap: '1rem 0',
-  padding: '2rem 25rem',
-  background: '#fff',
-  borderRadius: '1%',
-});
 
 const blogPost = css(
   mq({
@@ -56,37 +47,35 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
 
     return (
-      <div className={contentWrapper}>
-        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
-        <Header />
-        <div className={mainContent}>
-          {posts.map(post => {
-            if (post.node.path !== '/404/') {
-              const title =
-                get(post, 'node.frontmatter.title') || post.node.path;
-              return (
-                <div key={post.node.frontmatter.path} className={blogPost}>
-                  <Link to={post.node.frontmatter.path}>
-                    <h2 className={blogTitle}>{post.node.frontmatter.title}</h2>
-                    <small>{post.node.frontmatter.date}</small>
-                    <p
-                      dangerouslySetInnerHTML={{ __html: post.node.excerpt }}
-                    />
-                  </Link>
-                </div>
-              );
-            }
-          })}
+      <Layout>
+        <div className={contentWrapper}>
+          <Helmet title={siteTitle} />
+          <Header />
+          <div className={mainContent}>
+            {posts.map(post => {
+              if (post.node.path !== '/404/') {
+                const title =
+                  get(post, 'node.frontmatter.title') || post.node.path;
+                return (
+                  <div key={post.node.frontmatter.path} className={blogPost}>
+                    <Link to={post.node.frontmatter.path}>
+                      <h2 className={blogTitle}>{title}</h2>
+                      <small>{post.node.frontmatter.date}</small>
+                      <p
+                        dangerouslySetInnerHTML={{ __html: post.node.excerpt }}
+                      />
+                    </Link>
+                  </div>
+                );
+              }
+            })}
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </Layout>
     );
   }
 }
-
-BlogIndex.propTypes = {
-  route: React.PropTypes.object,
-};
 
 export default BlogIndex;
 
