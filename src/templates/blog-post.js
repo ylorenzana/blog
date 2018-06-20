@@ -1,11 +1,11 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import get from 'lodash/get';
 import { css } from 'emotion';
 
 import { mq, mainContent, contentWrapper } from '../layouts/cssConstants';
 import Header from '../components/Header';
+import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 
 const blogPost = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <div className={contentWrapper}>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+        <SEO title={`${post.frontmatter.title} | ${siteTitle}`} />
         <Header />
         <div className={mainContent}>
           <article className={blogPost}>

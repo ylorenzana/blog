@@ -1,10 +1,10 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import { css } from 'emotion';
 
 import { mq, mainContent, contentWrapper } from '../layouts/cssConstants';
 import Header from '../components/Header';
+import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import resume from '../assets/Lorenzana-Resume-Current.pdf';
 
@@ -19,7 +19,7 @@ const aboutParagraph = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
 
 const About = () => (
   <div className={contentWrapper}>
-    <Helmet title="About Yang Lorenzana" />
+    <SEO title="About Yang Lorenzana" />
     <Header />
     <div className={mainContent}>
       <article className={aboutParagraph}>

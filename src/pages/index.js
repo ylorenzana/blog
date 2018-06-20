@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import get from 'lodash/get';
-import Helmet from 'react-helmet';
 import { css } from 'emotion';
 
 import {
@@ -11,6 +10,7 @@ import {
   contentWrapper,
 } from '../layouts/cssConstants';
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -49,7 +49,7 @@ class BlogIndex extends React.Component {
     return (
       <Layout>
         <div className={contentWrapper}>
-          <Helmet title={siteTitle} />
+          <SEO title={siteTitle} />
           <Header />
           <div className={mainContent}>
             {posts.map(post => {

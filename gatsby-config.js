@@ -42,6 +42,18 @@ module.exports = {
         trackingId: `UA-120605896-1`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'The Dev Blog of Yang Lorenzana',
+        short_name: 'YL Dev Blog',
+        start_url: '/',
+        background_color: '#2C3E50',
+        theme_color: '#FFF',
+        display: 'minimal-ui',
+        icon: 'src/assets/avatar.png',
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
