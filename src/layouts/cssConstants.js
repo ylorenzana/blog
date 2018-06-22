@@ -41,7 +41,7 @@ export const mainContent = css(
     justifyItems: 'center',
     height: '100%',
     gridGap: '1rem 0',
-    padding: '2.5rem 1rem',
+    padding: '3.5rem 1rem',
     background: colors.white,
     borderRadius: '0.5rem',
     webkitBoxShadow: '0px -1px 29px 2px rgba(0,0,0,0.61)',

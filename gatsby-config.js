@@ -15,10 +15,11 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          'gatsby-plugin-emotion',
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 740,
             },
           },
           {
@@ -27,13 +28,18 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: '>',
+            },
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
       },
     },
-    `gatsby-plugin-emotion`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

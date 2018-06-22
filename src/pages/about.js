@@ -5,6 +5,7 @@ import { css } from 'emotion';
 import { mq, mainContent, contentWrapper } from '../layouts/cssConstants';
 import Header from '../components/Header';
 import SEO from '../components/SEO';
+import HomeButton from '../components/HomeButton';
 import Footer from '../components/Footer';
 import resume from '../assets/Lorenzana-Resume-Current.pdf';
 
@@ -54,7 +55,7 @@ const About = () => (
           currently working on some small React projects, and I'm going to be
           blogging throughout the process, so stay tuned!
         </p>
-        <Link to="/">&larr; Back to home page</Link>
+        <HomeButton />
       </article>
     </div>
     <Footer />

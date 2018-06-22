@@ -1,21 +1,26 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import get from 'lodash/get';
 import { css } from 'emotion';
 
 import { mq, mainContent, contentWrapper } from '../layouts/cssConstants';
 import Header from '../components/Header';
 import SEO from '../components/SEO';
+import HomeButton from '../components/HomeButton';
 import Footer from '../components/Footer';
 
 const blogPost = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
   padding: '1rem',
   lineHeight: '2',
+  maxWidth: '100%',
   h1: {
     color: '#222',
   },
-  h2: {
-    margin: 0,
+  'h3, h4': {
+    marginBottom: '0.25rem',
+  },
+  hr: {
+    margin: '4rem 0',
+    width: '100%',
   },
 });
 
@@ -42,9 +47,14 @@ class BlogPostTemplate extends React.Component {
               <p className={timeStamp}>{post.frontmatter.date}</p>
             </div>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            <span>
-              <Link to="/">&larr; Back to home page</Link>
-            </span>
+            <HomeButton />
+            <hr />
+            <div>
+              Hey! I'm{' '}
+              <a href="https://twitter.com/yanglorenzana">@yanglorenzana</a>. I
+              like to build cool stuff. AMA on Twitter, or simply stop by to say
+              hi!
+            </div>
           </article>
         </div>
         <Footer />

@@ -1,7 +1,5 @@
 import React from 'react';
 import { css } from 'react-emotion';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import heart from '@fortawesome/fontawesome-free-solid/faHeart';
 
 import { colors } from '../layouts/cssConstants';
 
@@ -27,9 +25,7 @@ const footer = css({
 const Footer = () => (
   <footer className={footer}>
     <p>
-      Built with &nbsp;
-      <FontAwesomeIcon icon={heart} size="1x" color={'crimson'} />
-      &nbsp; using <a href="https://www.gatsbyjs.org/">Gatsby.</a>
+      Built with ❤️ using <a href="https://www.gatsbyjs.org/">Gatsby.</a>
       <br />
       Written, and maintained by Yang Lorenzana, a full stack JS engineer.
     </p>

@@ -23,6 +23,9 @@ injectGlobal`
     a:hover {
       border-bottom: 0.15rem solid ${colors.darkTan};
     }
+    .gatsby-resp-image-link:hover, .gatsby-resp-image-link {
+      border-bottom: 0;
+    }
     h2, h3, h4{
      color: #222; 
     }
