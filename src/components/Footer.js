@@ -25,7 +25,11 @@ const footer = css({
 const Footer = () => (
   <footer className={footer}>
     <p>
-      Built with ❤️ using <a href="https://www.gatsbyjs.org/">Gatsby.</a>
+      Built with{' '}
+      <span role="img" aria-label="A red heart emoji">
+        ❤️
+      </span>{' '}
+      using <a href="https://www.gatsbyjs.org/">Gatsby.</a>
       <br />
       Written, and maintained by Yang Lorenzana, a full stack JS engineer.
     </p>

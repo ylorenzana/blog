@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { css } from 'emotion';
 
 import { mq, mainContent, contentWrapper } from '../layouts/cssConstants';
@@ -29,7 +28,7 @@ const iconGrid = css(
     gridGap: '2rem',
     placeItems: 'center',
     gridTemplateRows: '14rem',
-    margin: '2rem 0',
+    margin: '2.5rem 0',
   }
 );
 
