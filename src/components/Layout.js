@@ -5,4 +5,6 @@ import 'prismjs/themes/prism-solarizedlight.css';
 
 import '../layouts/globalStyles';
 
-export default ({ children, location }) => <div>{children}</div>;
+export default ({ children, location }) => (
+  <div className="test">{children}</div>
+);
