@@ -8,7 +8,6 @@ import SEO from '../components/SEO';
 import HomeButton from '../components/HomeButton';
 import Footer from '../components/Footer';
 import resume from '../assets/Lorenzana-Resume-Current.pdf';
-import reactSvg from '../assets/react.svg';
 
 const aboutParagraph = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
   padding: '1rem',
@@ -484,8 +483,9 @@ const About = () => (
             resume
           </a>
           , and a link to my&nbsp;
-          <a href="https://github.com/ylorenzana">GitHub</a>&nbsp;profile in—I pinned the repos of
-          some of the more relevant projects I have worked on to the front page.
+          <a href="https://github.com/ylorenzana">GitHub</a>&nbsp;profile in—I
+          pinned the repos of some of the more relevant projects I have worked
+          on to the front page.
         </p>
         <p>
           I used to prefer back-end development, but the more I work with React,
