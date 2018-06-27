@@ -47,7 +47,7 @@ const IconBar = () => (
     <a href="mailto:ylorenzana95@gmail.com" title="Email">
       <FontAwesomeIcon icon={envelope} size="lg" />
     </a>
-    <a href={resume} title="Resume">
+    <a href={resume} title="Resume" download="YangLorenzana-Resume">
       <FontAwesomeIcon icon={pdf} className={pdfIcon} />
     </a>
   </div>
