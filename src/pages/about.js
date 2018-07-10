@@ -54,11 +54,14 @@ const About = () => (
       <article className={aboutParagraph}>
         <h2>About me</h2>
         <p>
-          Yo! I'm Yang Lorenzana. I'm a software developer who loves all things
-          JavaScript. I recently graduated from Mercyhurst University with a
-          degree in Information Technology. I got into the world of programming
-          and CS as a young teenager wanting to create his own video games; I'll
-          elaborate further on that in a blog post someday!
+          Hey! I'm Yang Lorenzana. I'm a passionate software developer who loves
+          all things JavaScript. I recently graduated from Mercyhurst University
+          with a degree in Information Technology. I got into the world of
+          programming and Computer Science as a young teenager wanting to create
+          his own video games; I'll tell you more about that in a blog post one
+          day. I am currently looking for all sorts of exciting opportunities,
+          if you're interested in working together, please send me an{' '}
+          <a href="mailto:ylorenzana95@gmail.com">email</a>!
         </p>
         <h2>About my work</h2>
         <p>
@@ -477,9 +480,9 @@ const About = () => (
           I learned all of the fundamental Computer Science and object-oriented
           programming concepts using Python, because it was the language chosen
           by my school's CIS department. If you would like to view some of my
-          work, here's a download link for my&nbsp;
+          work and experience, here's a download link for my&nbsp;
           <a href={resume} download="YangLorenzana-Resume">
-            resume
+            résumé
           </a>
           , and a link to my&nbsp;
           <a href="https://github.com/ylorenzana">GitHub</a>&nbsp;profile in—I

@@ -32,7 +32,7 @@ module.exports = {
             resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',
-              inlineCodeMarker: '>',
+              inlineCodeMarker: '›',
             },
           },
           'gatsby-remark-copy-linked-files',

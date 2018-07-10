@@ -2,7 +2,12 @@ import React from 'react';
 import get from 'lodash/get';
 import { css } from 'emotion';
 
-import { mq, mainContent, contentWrapper } from '../layouts/cssConstants';
+import {
+  mq,
+  mainContent,
+  contentWrapper,
+  colors,
+} from '../layouts/cssConstants';
 import Header from '../components/Header';
 import SEO from '../components/SEO';
 import HomeButton from '../components/HomeButton';
@@ -31,6 +36,16 @@ const blogTitle = css({
 const timeStamp = css({
   margin: 0,
 });
+
+const twitterHandle = css({
+  color: colors.primaryBlue,
+  padding: '0.1rem',
+  border: 'none',
+  ':hover': {
+    backgroundColor: colors.lighterBlue,
+    border: 'none',
+  },
+});
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
@@ -50,10 +65,17 @@ class BlogPostTemplate extends React.Component {
             <HomeButton />
             <hr />
             <div>
-              Hey! I'm{' '}
-              <a href="https://twitter.com/yanglorenzana">@yanglorenzana</a>. I
-              like to build cool stuff. AMA on Twitter, or simply stop by to say
-              hi!
+              Hey! I'm Yang Lorenzana. I like to build cool stuff! You should
+              follow me on{' '}
+              <a
+                className={twitterHandle}
+                href="https://twitter.com/yanglorenzana"
+              >
+                Twitter
+              </a>. I welcome all conversations and reply to everyone {''}
+              <span role="img" aria-label="A grinning emoji">
+                😁
+              </span>!
             </div>
           </article>
         </div>
