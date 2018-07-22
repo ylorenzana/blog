@@ -67,9 +67,8 @@ const About = () => (
         <p>
           I have experience working with a somewhat broad variety of{' '}
           <em>dev stuff</em>, but today, I specialize in the development of
-          web-based platforms—the JAMstack—as we call it today. Here's an
-          overview of the tech and languages/tools I enjoy working with the
-          most:
+          web-based platforms. Here's an overview of the tech and
+          languages/tools I enjoy working with the most:
         </p>
         <div className={iconGrid}>
           <div className={iconWrapper}>
