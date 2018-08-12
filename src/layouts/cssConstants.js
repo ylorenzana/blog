@@ -15,7 +15,7 @@ export const colors = {
 const breakpoints = [576, 768, 992, 1200];
 
 export const mq = facepaint(
-  breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+  breakpoints.map((bp) => `@media (min-width: ${bp}px)`)
 );
 
 export const contentWrapper = css({
@@ -33,7 +33,7 @@ export const contentWrapper = css({
 
 export const mainContent = css(
   mq({
-    gridColumn: ['2 / -2', '2 / -2', '3 / -3'],
+    gridColumn: ['2 / -2', '2 / -2', '2 / -2', '3 / -3'],
   }),
   {
     display: 'grid',
@@ -43,9 +43,9 @@ export const mainContent = css(
     gridGap: '1rem 0',
     padding: '3.5rem 1rem',
     background: colors.white,
-    borderRadius: '0.5rem',
-    webkitBoxShadow: '0px -1px 29px 2px rgba(0,0,0,0.61)',
-    moxBoxShadow: '0px -1px 29px 2px rgba(0,0,0,0.61)',
-    boxShadow: '0px -1px 29px 2px rgba(0,0,0,0.61)',
+    borderRadius: '0.95rem',
+    webkitBoxShadow: '0px -1px 29px 2px rgba(0,0,0,0.80)',
+    moxBoxShadow: '0px -1px 29px 2px rgba(0,0,0,0.80)',
+    boxShadow: '0px -1px 29px 2px rgba(0,0,0,0.80)',
   }
 );

@@ -14,7 +14,7 @@
     "gatsby": "next",
     "gatsby-link": "next",
     "gatsby-plugin-emotion": "next",
-    "gatsby-plugin-favicon": "^2.1.1",
+    "gatsby-plugin-favicon": "next",
     "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-manifest": "next",

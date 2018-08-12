@@ -16,7 +16,7 @@ import Footer from '../components/Footer';
 
 const blogPost = css(
   mq({
-    gridColumn: ['2 / -2', '2 / -2', '3 / -3'],
+    gridColumn: ['2 / -2', '2 / -2', '2 / -2', '3 / -3'],
   }),
   {
     justifySelf: 'center',
@@ -52,7 +52,7 @@ class BlogIndex extends React.Component {
           <SEO title={siteTitle} />
           <Header />
           <div className={mainContent}>
-            {posts.map(post => {
+            {posts.map((post) => {
               if (post.node.path !== '/404/') {
                 const title =
                   get(post, 'node.frontmatter.title') || post.node.path;

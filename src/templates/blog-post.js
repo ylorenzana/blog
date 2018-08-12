@@ -13,21 +13,24 @@ import SEO from '../components/SEO';
 import HomeButton from '../components/HomeButton';
 import Footer from '../components/Footer';
 
-const blogPost = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
-  padding: '1rem',
-  lineHeight: '2',
-  maxWidth: '100%',
-  h1: {
-    color: '#222',
-  },
-  'h3, h4': {
-    marginBottom: '0.25rem',
-  },
-  hr: {
-    margin: '4rem 0',
-    width: '100%',
-  },
-});
+const blogPost = css(
+  mq({ gridColumn: ['2 / -2', '2 / -2', '2 / -2', '3 / -3'] }),
+  {
+    padding: '1rem',
+    lineHeight: '2',
+    maxWidth: '100%',
+    h1: {
+      color: '#222',
+    },
+    'h3, h4': {
+      marginBottom: '0.25rem',
+    },
+    hr: {
+      margin: '4rem 0',
+      width: '100%',
+    },
+  }
+);
 
 const blogTitle = css({
   marginBottom: 0,

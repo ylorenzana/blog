@@ -22,7 +22,7 @@ A high-level explanation of the auth system goes like this:
 
 **In This Tutorial (Part 1)**: We will cover user registration and login. This includes the setup of our Node.js server, the creation of the User model for our database, and the routes to handle registration and login.
 
-**In Part 2**: We will cover sessions. This includes the creation of the Session model for our database, the token generation to represent sessions, changes to our users route to use the sessions, and implement new protected routes to showcase single sign on.
+**In [Part 2]()**: We will cover sessions. This includes the creation of the Session model for our database, the token generation to represent sessions, changes to our users route to use the sessions, and implement new protected routes to showcase single sign on.
 
 After we cover the main parts of the project throughout the series, we will be implementing additional features, such as CSRF mitigation and password reset. We're sticking to the basic authentication, for now, so let's get started!
 
@@ -386,4 +386,4 @@ Now that we tested it with correct inputs, make sure to also test for edge cases
 
 ##Wrap Up
 
-Whew! We got a lot done in this tutorial. We got out Node server set up, created a model for our Users, and added routes to handle user registration and login. In [part 2](), we will implement single sign-on using server sessions and more! Follow me on Twitter to know as soon as part 2 is published, I'm working on it now and it should be out really soon!
+Whew! We got a lot done in this tutorial. We got out Node server set up, created a model for our Users, and added routes to handle user registration and login. In [part 2]("./2018-08-06-nodejs-api-auth-tutorial-pt-2"), we will implement single sign-on using server sessions and more! Follow me on Twitter to know as soon as part 2 is published, I'm working on it now and it should be out really soon!

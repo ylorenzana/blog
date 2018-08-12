@@ -25,14 +25,14 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           console.log(result.errors);
           reject(result.errors);
         }
 
         // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
+        _.each(result.data.allMarkdownRemark.edges, (edge) => {
           createPage({
             path: edge.node.frontmatter.path,
             component: blogPost,
@@ -43,18 +43,5 @@ exports.createPages = ({ graphql, actions }) => {
         });
       })
     );
-  });
-};
-
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.pdf$/,
-          use: 'url-loader',
-        },
-      ],
-    },
   });
 };

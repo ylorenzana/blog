@@ -31,7 +31,7 @@ const Footer = () => (
       </span>{' '}
       using <a href="https://www.gatsbyjs.org/">Gatsby.</a>
       <br />
-      Written, and maintained by Yang Lorenzana, a full stack JS engineer.
+      Written and maintained by Yang Lorenzana, a full-stack developer.
     </p>
   </footer>
 );

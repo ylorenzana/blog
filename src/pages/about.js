@@ -8,15 +8,18 @@ import HomeButton from '../components/HomeButton';
 import Footer from '../components/Footer';
 import resume from '../assets/Lorenzana-Resume-Current.pdf';
 
-const aboutParagraph = css(mq({ gridColumn: ['2 / -2', '2 / -2', '3 / -3'] }), {
-  padding: '1rem',
-  lineHeight: '2',
-  margin: '0',
-  placeItems: 'center',
-  h2: {
-    margin: 0,
-  },
-});
+const aboutParagraph = css(
+  mq({ gridColumn: ['2 / -2', '2 / -2', '2 / -2', '3 / -3'] }),
+  {
+    padding: '1rem',
+    lineHeight: '2',
+    margin: '0',
+    placeItems: 'center',
+    h2: {
+      margin: 0,
+    },
+  }
+);
 
 const iconGrid = css(
   mq({
