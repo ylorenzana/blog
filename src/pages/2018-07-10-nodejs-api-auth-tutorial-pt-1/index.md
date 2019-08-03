@@ -1,7 +1,7 @@
 ---
-title: "Node.js API Authentication Tutorial Part 1: User Registration & Login"
-date: "2018-07-10T04:46:38+00:00" 
-path: "/nodejs-api-authentication-tutorial-pt-1/"
+title: 'Node.js API Authentication Tutorial Part 1: User Registration & Login'
+date: '2018-07-10T04:46:38+00:00'
+path: '/nodejs-api-authentication-tutorial-pt-1/'
 ---
 
 **Another tutorial series for API authentication** in Node.js? Yep! But in this case, we won't be using [JSON Web Tokens](https://jwt.io/) (aka JWTs) like pretty much every other tutorial out there, because [reasons](https://hn.algolia.com/?query=author:tptacek%20jwt&sort=byPopularity&prefix&page=0&dateRange=all&type=comment)! I won't try to convince you that JWTs are bad, nor will I tell you not to use them, we just won't be using them for this project. Instead of stateless authentication with JWTs, we will roll out our own implementation of server-side sessions using bearer tokens to represent them. Wait, does that mean our API won't be RESTful? Well, yes, but for good reason. According to security expert [Thomas Ptacek](https://news.ycombinator.com/item?id=16157002): "You almost certainly do not and will not need _stateless_ authentication; to get it, you will sacrifice security and some usability, and in a typical application that depends on a database to get anything done anyways, you'll make those sacrifices for nothing". Whew! I'm glad I got that out of the way. Moving on!
@@ -22,7 +22,7 @@ A high-level explanation of the auth system goes like this:
 
 **In This Tutorial (Part 1)**: We will cover user registration and login. This includes the setup of our Node.js server, the creation of the User model for our database, and the routes to handle registration and login.
 
-**In [Part 2]()**: We will cover sessions. This includes the creation of the Session model for our database, the token generation to represent sessions, changes to our users route to use the sessions, and implement new protected routes to showcase single sign on.
+**In [Part 2](/nodejs-api-authentication-tutorial-pt-2/)**: We will cover sessions. This includes the creation of the Session model for our database, the token generation to represent sessions, changes to our users route to use the sessions, and implement new protected routes to showcase secure sign on.
 
 After we cover the main parts of the project throughout the series, we will be implementing additional features, such as CSRF mitigation and password reset. We're sticking to the basic authentication, for now, so let's get started!
 
@@ -146,9 +146,9 @@ mkdir models
 touch models/user.js models/session.js
 ```
 
-We'll start off with our `user.js` model by adding the keys for email and password (the keys will be the fields for the collection). We are actually going to leave our `session.js` file blank for this part of the tutorial, we will work on that on [part 2](/#).
+We'll start off with our `user.js` model by adding the keys for email and password (the keys will be the fields for the collection). We are actually going to leave our `session.js` file blank for this part of the tutorial, we will work on that on [part 2](/nodejs-api-authentication-tutorial-pt-2).
 
-We **_do not_** want to store our users' passwords in our database in plaintext so we will be salting and hashing them before saving each document. To do this, we will write a function using the [`bcrypt.js`](https://www.npmjs.com/package/bcryptjs) library we installed earlier. `Bcrypt.js`'s API exposes some neat methods for generating a secure salt and hash based on the Blowfish cipher. If you want to change the number of rounds (aka cost factor) used to generate the salt, make sure
+We **_DO NOT_** want to store our users' passwords in our database in plaintext so we will be salting and hashing them before saving each document. To do this, we will write a function using the [`bcrypt.js`](https://www.npmjs.com/package/bcryptjs) library we installed earlier. `Bcrypt.js`'s API exposes some neat methods for generating a secure salt and hash based on the Blowfish cipher. If you want to change the number of rounds (aka cost factor) used to generate the salt, make sure
 you use **_at least 12_**.
 
 This is what our `user.js` file will look like:
@@ -386,4 +386,4 @@ Now that we tested it with correct inputs, make sure to also test for edge cases
 
 ##Wrap Up
 
-Whew! We got a lot done in this tutorial. We got out Node server set up, created a model for our Users, and added routes to handle user registration and login. In [part 2]("./2018-08-06-nodejs-api-auth-tutorial-pt-2"), we will implement single sign-on using server sessions and more! Follow me on Twitter to know as soon as part 2 is published, I'm working on it now and it should be out really soon!
+Whew! We got a lot done in this tutorial. We got out Node server set up, created a model for our Users, and added routes to handle user registration and login. In [part 2](/nodejs-api-authentication-tutorial-pt-2), we will implement server sessions and more! Follow me on Twitter to know as soon as part 2 is published, I'm working on it now and it should be out really soon!

@@ -26,8 +26,12 @@ injectGlobal`
     .gatsby-resp-image-link:hover, .gatsby-resp-image-link {
       border-bottom: 0;
     }
-    h2, h3, h4{
+    h2, h3, h4 {
      color: #222; 
+    }
+    blockquote {
+      border-left: 0.5rem solid #666;
+      padding-left: 1.5rem;
     }
   }
   *, *:before, *:after {

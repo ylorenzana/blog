@@ -16,7 +16,7 @@ import Footer from '../components/Footer';
 
 const blogPost = css(
   mq({
-    gridColumn: ['2 / -2', '2 / -2', '2 / -2', '3 / -3'],
+    gridColumn: ['2 / -2', '2 / -2', '2 / -2', '2 / -2', '3 / -3'],
   }),
   {
     justifySelf: 'center',

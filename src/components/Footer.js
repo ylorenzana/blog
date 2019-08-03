@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'react-emotion';
+import { css } from 'emotion';
 
 import { colors } from '../layouts/cssConstants';
 
@@ -31,7 +31,7 @@ const Footer = () => (
       </span>{' '}
       using <a href="https://www.gatsbyjs.org/">Gatsby.</a>
       <br />
-      Written and maintained by Yang Lorenzana, a full-stack developer.
+      Built and maintained by Yang Lorenzana, a full-stack software developer.
     </p>
   </footer>
 );

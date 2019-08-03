@@ -14,7 +14,7 @@ import HomeButton from '../components/HomeButton';
 import Footer from '../components/Footer';
 
 const blogPost = css(
-  mq({ gridColumn: ['2 / -2', '2 / -2', '2 / -2', '3 / -3'] }),
+  mq({ gridColumn: ['2 / -2', '2 / -2', '2 / -2', '2 / -2', '3 / -3'] }),
   {
     padding: '1rem',
     lineHeight: '2',
@@ -75,10 +75,12 @@ class BlogPostTemplate extends React.Component {
                 href="https://twitter.com/yanglorenzana"
               >
                 Twitter
-              </a>. I welcome all conversations and reply to everyone {''}
+              </a>
+              . I welcome all conversations and reply to everyone {''}
               <span role="img" aria-label="A grinning emoji">
                 😁
-              </span>!
+              </span>
+              !
             </div>
           </article>
         </div>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, StaticQuery, graphql } from 'gatsby';
 import { css } from 'emotion';
+import Img from 'gatsby-image';
 
 import { colors } from '../layouts/cssConstants';
-import avatar from '../assets/avatar.png';
 import IconBar from '../components/IconBar';
 
 const header = css({
@@ -66,7 +66,7 @@ const pic = css({
   height: '12rem',
 });
 
-const Header = () => (
+const Header = ({ avatar }) => (
   <header className={header}>
     <nav className={navBar}>
       <Link to="/about" activeClassName={activeLink}>
@@ -75,11 +75,7 @@ const Header = () => (
     </nav>
     <div className={logo}>
       <Link to={'/'}>
-        <img
-          src={avatar}
-          alt="A drawing of Yang Lorenzana in a stylish hoodie!"
-          className={pic}
-        />
+        <Img fixed={avatar} className={pic} />
       </Link>
       <Link to={'/'}>
         <h1>the dev blog of yang lorenzana</h1>
@@ -89,4 +85,19 @@ const Header = () => (
   </header>
 );
 
-export default Header;
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query ImageQuery {
+        avatar: file(relativePath: { eq: "avatar.png" }) {
+          childImageSharp {
+            fixed(width: 105) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `}
+    render={(data) => <Header avatar={data.avatar.childImageSharp.fixed} />}
+  />
+);
