@@ -25,13 +25,12 @@ const footer = css({
 const Footer = () => (
   <footer className={footer}>
     <p>
-      Built with{' '}
-      <span role="img" aria-label="A red heart emoji">
-        ❤️
-      </span>{' '}
-      using <a href="https://www.gatsbyjs.org/">Gatsby.</a>
+      This blog was built and is maintained by &nbsp;
+      <a href="https://twitter.com/yanglorenzana">Yang Lorenzana</a>, a
+      full-stack software developer.
       <br />
-      Built and maintained by Yang Lorenzana, a full-stack software developer.
+      Built with &nbsp;
+      <a href="https://www.gatsbyjs.org/">Gatsby.</a>
     </p>
   </footer>
 );
