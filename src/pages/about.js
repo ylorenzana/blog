@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 
 import { mq, mainContent, contentWrapper } from '../layouts/cssConstants';
 import Header from '../components/Header';

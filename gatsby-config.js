@@ -75,22 +75,22 @@ module.exports = {
         fonts: [`ubuntu\:400,500,700`],
       },
     },
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: './src/assets/avatar.png',
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          twitter: false,
-          yandex: false,
-          windows: false,
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-favicon`,
+    //   options: {
+    //     logo: './src/assets/avatar.png',
+    //     icons: {
+    //       android: true,
+    //       appleIcon: true,
+    //       appleStartup: true,
+    //       coast: false,
+    //       favicons: true,
+    //       firefox: true,
+    //       twitter: false,
+    //       yandex: false,
+    //       windows: false,
+    //     },
+    //   },
+    // },
   ],
 };

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import get from 'lodash/get';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
+import { graphql } from 'gatsby';
 
 import {
   mq,

@@ -1,4 +1,4 @@
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import facepaint from 'facepaint';
 
 export const colors = {

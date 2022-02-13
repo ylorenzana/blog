@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 
 // import avatar from '../assets/avatar.png';
 import { colors } from '../layouts/cssConstants';
